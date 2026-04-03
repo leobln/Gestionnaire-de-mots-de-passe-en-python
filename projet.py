@@ -44,7 +44,6 @@ def lire_texte_clair(mdp):
     return donnees_claires
 
 def enregistrer_texte(texte_total, mdp):
-    """ Chiffre et écrit le texte dans le fichier """
     donnees_a_ecrire = crypter_decrypter(texte_total.encode(), mdp)
     with open(INFOS, "wb") as f:
         f.write(donnees_a_ecrire)
@@ -90,7 +89,7 @@ def main():
             else:
                 print("Choix invalide.")
     else:
-        # Si le mot de passe est faux, le programme s'arrête ici
+        # Si le mdp est faux, le programme s'arrête 
         print("Fin du programme.")
 
 if __name__ == "__main__":
