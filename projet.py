@@ -5,7 +5,6 @@ VERROU  = os.path.join(DOSSIER, "verrou.txt")
 INFOS   = os.path.join(DOSSIER, "donnees.txt")
 
 def hacher(texte):
-    """ Transforme le mdp en code de sécurité (ton exemple) """
     return hashlib.sha256(texte.encode()).hexdigest()
 
 def crypter_decrypter(donnees, mdp):
@@ -22,7 +21,6 @@ def crypter_decrypter(donnees, mdp):
     return bytes(resultat_melange)
 
 def verifier_mot_de_pass(essai):
-    """ Vérifie le mot de passe et affiche le résultat """
     with open(VERROU, "r") as f:
         code_stocke = f.read()
     
@@ -35,7 +33,7 @@ def verifier_mot_de_pass(essai):
 
 def lire_texte_clair(mdp):
     if not os.path.exists(INFOS):
-        print("ℹAucun compte enregistré pour le moment.")
+        print("Aucun compte enregistré pour le moment.")
         return ""
 
     with open(INFOS, "rb") as f:
