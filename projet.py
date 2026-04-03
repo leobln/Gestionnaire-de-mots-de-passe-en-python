@@ -84,7 +84,7 @@ def main():
                 print("Ajouté avec succès !")
 
             elif choix == "3":
-                print("Fermeture du coffre...")
+                print("Fermeture du programme")
                 break 
             else:
                 print("Choix invalide.")
